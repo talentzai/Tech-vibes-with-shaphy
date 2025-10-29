@@ -1,0 +1,493 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "Resume Review Form",
+        "formDescription": "Upload all applicant resumes below and select the corresponding job positions. Our SmartHR Agent will review each submission and provide a detailed evaluation for your consideration.",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "CV",
+              "fieldType": "file",
+              "acceptFileTypes": ".pdf",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Job Description",
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {
+          "appendAttribution": false,
+          "customCss": ":root {\n\t--font-family: 'Open Sans', sans-serif;\n\t--font-weight-normal: 400;\n\t--font-weight-bold: 600;\n\t--font-size-body: 12px;\n\t--font-size-label: 14px;\n\t--font-size-test-notice: 12px;\n\t--font-size-input: 14px;\n\t--font-size-header: 20px;\n\t--font-size-paragraph: 14px;\n\t--font-size-link: 12px;\n\t--font-size-error: 12px;\n\t--font-size-html-h1: 28px;\n\t--font-size-html-h2: 20px;\n\t--font-size-html-h3: 16px;\n\t--font-size-html-h4: 14px;\n\t--font-size-html-h5: 12px;\n\t--font-size-html-h6: 10px;\n\t--font-size-subheader: 14px;\n\n\t/* Colors */\n\t--color-background: #fbfcfe;\n\t--color-test-notice-text: #e6a23d;\n\t--color-test-notice-bg: #fefaf6;\n\t--color-test-notice-border: #f6dcb7;\n\t--color-card-bg: #ffffff;\n\t--color-card-border: #dbdfe7;\n\t--color-card-shadow: rgba(99, 77, 255, 0.06);\n\t--color-link: #7e8186;\n\t--color-header: #525356;\n\t--color-label: #555555;\n\t--color-input-border: #dbdfe7;\n\t--color-input-text: #71747A;\n\t--color-focus-border: rgb(90, 76, 194);\n\t--color-submit-btn-bg: #0000FF; /* Changed to blue */\n\t--color-submit-btn-text: #ffffff;\n\t--color-error: #ea1f30;\n\t--color-required: #ff6d5a;\n\t--color-clear-button-bg: #7e8186;\n\t--color-html-text: #555;\n\t--color-html-link: #ff6d5a;\n\t--color-header-subtext: #7e8186;\n\n\t/* Border Radii */\n\t--border-radius-card: 8px;\n\t--border-radius-input: 6px;\n\t--border-radius-clear-btn: 50%;\n\t--card-border-radius: 8px;\n\n\t/* Spacing */\n\t--padding-container-top: 24px;\n\t--padding-card: 24px;\n\t--padding-test-notice-vertical: 12px;\n\t--padding-test-notice-horizontal: 24px;\n\t--margin-bottom-card: 16px;\n\t--padding-form-input: 12px;\n\t--card-padding: 24px;\n\t--card-margin-bottom: 16px;\n\n\t/* Dimensions */\n\t--container-width: 448px;\n\t--submit-btn-height: 48px;\n\t--checkbox-size: 18px;\n\n\t/* Others */\n\t--box-shadow-card: 0px 4px 16px 0px var(--color-card-shadow);\n\t--opacity-placeholder: 0.5;\n}\n"
+        }
+      },
+      "id": "31815a99-970e-45dd-9eac-19b04fe6afbe",
+      "name": "Application form",
+      "type": "n8n-nodes-base.formTrigger",
+      "position": [
+        1840,
+        576
+      ],
+      "webhookId": "c0275bde-d427-49f0-b497-a648da2788e7",
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "operation": "pdf",
+        "options": {}
+      },
+      "id": "ff46db6c-5f77-4c45-b0a2-d8997760f363",
+      "name": "Extract profile",
+      "type": "n8n-nodes-base.extractFromFile",
+      "position": [
+        2272,
+        384
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"full_name\": \"\",\n  \"job_title\": \"\",\n  \"summary\": \"\",\n  \"contact\": {\n    \"email\": \"\",\n    \"phone\": \"\",\n    \"address\": \"\",\n    \"linkedin\": \"\",\n    \"website\": \"\"\n  },\n  \"education\": [\n    {\n      \"degree\": \"\",\n      \"field_of_study\": \"\",\n      \"institution\": \"\",\n      \"location\": \"\",\n      \"start_year\": \"\",\n      \"end_year\": \"\"\n    }\n  ],\n  \"certifications\": [\n    {\n      \"name\": \"\",\n      \"issuer\": \"\",\n      \"date_obtained\": \"\",\n      \"expiration_date\": \"\"\n    }\n  ],\n  \"work_experience\": [\n    {\n      \"company\": \"\",\n      \"position\": \"\",\n      \"location\": \"\",\n      \"start_date\": \"\",\n      \"end_date\": \"\",\n      \"responsibilities\": [\n        \"\"\n      ],\n      \"achievements\": [\n        \"\"\n      ]\n    }\n  ],\n  \"skills\": {\n    \"technical_skills\": [\n      \"\"\n    ],\n    \"soft_skills\": [\n      \"\"\n    ],\n    \"languages\": [\n      {\n        \"language\": \"\",\n        \"proficiency\": \"\"\n      }\n    ],\n    \"tools_and_technologies\": [\n      \"\"\n    ]\n  },\n  \"projects\": [\n    {\n      \"name\": \"\",\n      \"description\": \"\",\n      \"technologies_used\": [\n        \"\"\n      ],\n      \"role\": \"\",\n      \"duration\": \"\"\n    }\n  ],\n  \"awards\": [\n    {\n      \"title\": \"\",\n      \"issuer\": \"\",\n      \"date\": \"\",\n      \"description\": \"\"\n    }\n  ],\n  \"volunteer_experience\": [\n    {\n      \"organization\": \"\",\n      \"role\": \"\",\n      \"description\": \"\",\n      \"start_date\": \"\",\n      \"end_date\": \"\"\n    }\n  ],\n  \"additional_information\": {\n    \"availability\": \"\",\n    \"preferred_location\": \"\",\n    \"salary_expectation\": \"\",\n    \"work_authorization\": \"\",\n    \"other_notes\": \"\"\n  }\n}"
+      },
+      "id": "4e80f14b-b866-4966-ad8b-b92276dfc676",
+      "name": "json parser",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "position": [
+        2656,
+        608
+      ],
+      "typeVersion": 1.3
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "id": "8a0d545c-b28d-4a0b-ba77-d3533597d155",
+      "name": "gpt4-1 model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "position": [
+        2496,
+        608
+      ],
+      "typeVersion": 1.2,
+      "credentials": {
+        "openAiApi": {
+          "id": "Xkej8nUmG6matbun",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Evaluate the candidate for the following position ({{ $json.position }}) with job description: {{ $json.job_description }}\n------------------------\nBelow is the extracted candidate profile:\n{{ $json.candidate_profile.toJsonString() }}",
+        "hasOutputParser": true,
+        "messages": {
+          "messageValues": [
+            {
+              "message": "You are a professional AI hiring assistant tasked with evaluating job candidates based on their structured resume data and a provided job description. Your goal is to assess the candidate’s suitability for the role, identifying key matches and gaps in skills, experience, and qualifications.  You will receive: - `candidate_profile`: a JSON object containing extracted information from the candidate's resume. - `job_description`: a plain text description of the role.  Your job is to: 1. Parse and understand the key job requirements (e.g., required skills, years of experience, qualifications). 2. Match the candidate's profile to the job requirements. 3. Provide a structured evaluation with ratings and reasoning.  Always be objective, use professional language, and format your output clearly using markdown."
+            }
+          ]
+        }
+      },
+      "id": "1e3e7898-f264-4446-b2a0-c0d6445a6637",
+      "name": "HR Expert Agent",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "position": [
+        3728,
+        656
+      ],
+      "typeVersion": 1.5
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Please extract all relevant information from this candidate:\nCV Content:\n===\n{{ $json[\"text\"] }}\n===",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": ""
+        }
+      },
+      "id": "8e4f9f63-86ac-43f3-a535-4c49b4ea3863",
+      "name": "Profile Analyzer Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "position": [
+        2496,
+        384
+      ],
+      "typeVersion": 2.1,
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const evaluationResult = item.json.output;\n\nreturn {\n    json: {\n      full_name: evaluationResult.full_name || '',\n      email: evaluationResult.email || '',\n      phone: evaluationResult.phone || '',\n      position: evaluationResult.applied_position,\n      overall_fit_score: evaluationResult.overall_fit_score,\n      recommendation: evaluationResult.recommendation,\n      strengths: Array.isArray(evaluationResult.strengths) ? evaluationResult.strengths.join(', ') : '',\n      concerns_or_gaps: Array.isArray(evaluationResult.concerns_or_gaps) ? evaluationResult.concerns_or_gaps.join(', ') : '',\n      final_notes: evaluationResult.final_notes || '',\n      submitted_date: $now.toFormat(\"yyyyLLdd-HHmmss\")\n    }\n  };"
+      },
+      "id": "1cfcfbec-2206-4d24-985c-5a7307f045a8",
+      "name": "Map Columns",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        4272,
+        656
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "id": "bc0cc422-0789-466f-a485-9615bea31687",
+      "name": "gpt-4-1 model 2",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "position": [
+        3696,
+        896
+      ],
+      "typeVersion": 1.2,
+      "credentials": {
+        "openAiApi": {
+          "id": "Xkej8nUmG6matbun",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"full_name\":\"\",\n  \"phone\":\"\",\n  \"address\":\"\",\n  \"email\":\"\",\n  \"applied_position\":\"\",\n  \"overall_fit_score\": 0,\n  \"recommendation\": \"\", \n  \"job_match_summary\": {\n    \"required_experience\": \"\",\n    \"skill_match\": \"\",\n    \"education_certifications\": \"\",\n    \"soft_skills_traits\": \"\"\n  },\n  \"strengths\": [\n    \"\"\n  ],\n  \"concerns_or_gaps\": [\n    \"\"\n  ],\n  \"final_notes\": \"\"\n}"
+      },
+      "id": "a9f1c1b2-b75b-49c8-84e2-e3b328824c1a",
+      "name": "json parser 2",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "position": [
+        4000,
+        896
+      ],
+      "typeVersion": 1.3
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "a69c879b-ebf6-4237-b19a-4bb1e4686746",
+              "operator": {
+                "type": "number",
+                "operation": "gte"
+              },
+              "leftValue": "={{ $('HR Expert Agent').item.json.output.overall_fit_score }}",
+              "rightValue": 8
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "df5ab265-1b74-4f89-9d01-db9b4d5e26f2",
+      "name": "Candidate qualified?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        4688,
+        576
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "jsCode": "const data = $input.item.json;\nconst binaryData = $input.item.binary;\n\nlet output = [];\n\nObject.keys(binaryData)\n  .filter(label => label.startsWith(\"CV_\"))\n  .forEach(label => {\n    output.push({\n      json: data,\n      binary: { data: binaryData[label] }\n    });\n  });\n\nreturn output;"
+      },
+      "id": "99d34017-e9b7-4802-8f69-9b77a90ec9f2",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        2064,
+        384
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {},
+      "id": "9067e3d6-34a4-4c04-a785-a929aa32b912",
+      "name": "Merge",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        3296,
+        656
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "jsCode": "// Raw merged input (first N items are candidate profiles, last item is JD)\nconst items = $input.all();\n\n// Extract job description (assuming it's the last element)\nconst jdItem = items[items.length - 1];\nconst job_description = jdItem.json.text;\n\n// Prepare output array\nconst results = [];\n\n// Loop through all items except the last one (JD)\nfor (let i = 0; i < items.length - 1; i++) {\n  const candidate = items[i].json.output;\n  results.push({\n    json: {\n      candidate_profile: candidate,\n      job_description: job_description,\n      applied_position: $('Application form').first().json['Job Role']\n    }\n  });\n}\n\nreturn results;"
+      },
+      "id": "3b30fd6b-489a-4050-8ff0-74d3e257b477",
+      "name": "Code1",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        3472,
+        656
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "82f62f61-ceaa-4ff2-8493-da82d0165729",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              },
+              "leftValue": "={{ $json.output.full_name }}",
+              "rightValue": ""
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e6ce2613-5dbc-4005-a939-982af7e75d3f",
+      "name": "Remove bad data CV",
+      "type": "n8n-nodes-base.filter",
+      "position": [
+        2912,
+        384
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-5-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-5-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "As an expert Recruiting Manager rewrite the JD to ensure its detailed and crisp, do not exaggerate or hallucinate",
+              "role": "system"
+            },
+            {
+              "content": "={{ $json[\"Job Description\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        2496,
+        976
+      ],
+      "id": "4ef535cc-e36d-4db8-8df2-00f6e9e543f0",
+      "name": "Message a model",
+      "credentials": {
+        "openAiApi": {
+          "id": "Xkej8nUmG6matbun",
+          "name": "OpenAi account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Application form": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract profile": {
+      "main": [
+        [
+          {
+            "node": "Profile Analyzer Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "json parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Profile Analyzer Agent",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "gpt4-1 model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Profile Analyzer Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HR Expert Agent": {
+      "main": [
+        [
+          {
+            "node": "Map Columns",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Profile Analyzer Agent": {
+      "main": [
+        [
+          {
+            "node": "Remove bad data CV",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Map Columns": {
+      "main": [
+        [
+          {
+            "node": "Candidate qualified?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "gpt-4-1 model 2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "HR Expert Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "json parser 2": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "HR Expert Agent",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Candidate qualified?": {
+      "main": [
+        [],
+        []
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Extract profile",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Code1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "node": "HR Expert Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Remove bad data CV": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateId": "6680",
+    "templateCredsSetupCompleted": true,
+    "instanceId": "366b656ce92d3882e99496136319f0eefaf44861eca228c4d767f9695a130ef3"
+  }
+}
