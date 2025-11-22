@@ -1,0 +1,148 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a83156e0-1782-4d0a-a15c-1ff889ff915d",
+              "name": "Relevant Products",
+              "type": "string",
+              "value": "AI Hiring"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "da8818a6-acea-4250-ab17-d9df17de953a",
+      "name": "Define relevant products",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        352,
+        -128
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "552c61c2-1ec0-40b5-b473-2423b646418b",
+              "operator": {
+                "type": "string",
+                "operation": "notContains"
+              },
+              "leftValue": "={{ $json.data.modelResponse }}",
+              "rightValue": "[NA]"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "299cad1f-e6e9-43f8-9e58-645909c8b8cc",
+      "name": "Found products?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        800,
+        -128
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "resource": "extraction",
+        "operation": "query",
+        "sessionMode": "new",
+        "url": "https://www.producthunt.com/",
+        "prompt": "=Extract up to 5 product launches that are {{ $json[\"Relevant Products\"] }} for each product extract the title and URL (if exists).\n\nReturn format:\nToday's [{{ $json[\"Relevant Products\"] }}] on Producthunt\n1. Title 1 (URL 1)\n2. Title 2 (URL 2)\nand so on\n\nIf you cannot find any relevant products, return [NA]",
+        "additionalFields": {}
+      },
+      "id": "92ca3a81-e1c2-4734-a610-6beacdd48d25",
+      "name": "Look up products",
+      "type": "n8n-nodes-base.airtop",
+      "position": [
+        576,
+        -128
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "airtopApi": {
+          "id": "cnS4rOE1ieULy9RW",
+          "name": "Airtop account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 6
+            }
+          ]
+        }
+      },
+      "id": "045b94f3-b7b1-489c-8ca6-ed4949ab0f76",
+      "name": "Trigger daily",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [
+        128,
+        -128
+      ],
+      "typeVersion": 1.2
+    }
+  ],
+  "connections": {
+    "Define relevant products": {
+      "main": [
+        [
+          {
+            "node": "Look up products",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Found products?": {
+      "main": [
+        []
+      ]
+    },
+    "Look up products": {
+      "main": [
+        [
+          {
+            "node": "Found products?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Trigger daily": {
+      "main": [
+        [
+          {
+            "node": "Define relevant products",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "366b656ce92d3882e99496136319f0eefaf44861eca228c4d767f9695a130ef3"
+  }
+}
