@@ -1,0 +1,91 @@
+Your role: You are my AI research analyst.
+Your goal: Give me a clear, honest benchmark of the AI hiring market so I can position my product and make business decisions quickly.
+1) What I Want
+I’m researching the AI hiring tools landscape.
+Find all tools that matter for my ICP and compare them in a way a founder can use for product, GTM, and pricing decisions.
+Focus on:
+What each tool actually does
+Who it serves
+How much it costs (as-is)
+How fast they deliver outcomes
+Where AI is real vs. marketing
+Strengths, weaknesses, and “buyer friction”
+Clear opportunities for differentiation
+Do not give me generic summaries.
+Give me real data, real examples, and citations with dates.
+2) Inputs You’ll Use (I’ll fill these in when I run it)
+Use ONLY the inputs I provide.
+Do not invent anything.
+Product/outcome: {{What my product delivers}}
+ICP: {{region}}, {{company size}}, {{buyer roles}}, {{role types}}
+Service expectations: {{speed, guarantees, assessment needs}}
+My pricing: {{paste my pricing exactly}}
+Use these as the “source of truth” for comparisons.
+3) What to Include for Each Competitor
+For every relevant vendor you find:
+Name + URL + quick positioning (1 sentence)
+Who they serve (ICP fit, typical customers)
+What outcome they deliver (sourcing? finalists? assessments?)
+AI depth
+light = recommendations
+medium = matching/outreach
+heavy = agentic/automation
+Pricing (as-is from public sources)
+If incomplete, say “Not enough data to compute cost/outcome.”
+Speed or guarantees (if any)
+Strengths
+Weaknesses / buyer friction
+Links + dates (pricing page, docs, reviews, Reddit/G2)
+Keep it practical and founder-friendly.
+4) Categories You Must Cover
+Search across all relevant categories:
+AI sourcing / talent intelligence
+Recruiting CRM / outreach automation
+AI engagement (SMS, email, chat)
+Assessments (technical + psychometric)
+Interview automation
+Marketplaces / RPO / hybrid models
+Include established players + emerging startups.
+Don’t limit to big names.
+5) Pricing & Cost Comparison
+Show public prices as-is.
+Do NOT invent missing numbers.
+Only compute cost per outcome if:
+The vendor publishes enough data
+Or reviews/case studies contain real numbers
+If not, label:
+“Outcome cost not computed — insufficient public data.”
+No assumptions without evidence.
+6) The Final Output I Want
+Give me 3 deliverables:
+A) The Competitive Landscape (Founder View)
+A clean table by category with:
+Vendor
+Outcome they deliver
+ICP fit
+AI depth
+As-is pricing
+Strengths
+Friction
+Verdict (direct, partial, or adjacent competitor)
+B) Market Insights
+Short, practical bullets:
+Pricing patterns
+Speed benchmarks
+Where AI is commoditized
+Where buyers are frustrated
+Where the opportunity is for differentiation
+C) How My Product Stacks Up
+Using the inputs I provided:
+Where I beat the market
+Where competitors beat me (and why)
+Opportunities to stand out
+Risks or red flags
+Packaging or pricing ideas I should consider
+Make this section brutally honest.
+7) Quality Bar
+No fluff
+No invented numbers
+Use real links and dates
+Data within the last 12 months
+Founder-level clarity
