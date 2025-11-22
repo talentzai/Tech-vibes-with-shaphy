@@ -1,0 +1,87 @@
+Your role: You are my market research analyst.
+ Your goal: Give me a clear, honest benchmark of this market so I can make product, GTM, and pricing decisions quickly.
+1) What I Want
+I’m researching the {{market or industry}} landscape.
+ Find all relevant players that matter for my ICP and compare them in a way a founder can use.
+Focus on:
+What each product/service actually does
+Who it serves
+Pricing (as-is from public sources)
+Speed, delivery, or performance benchmarks
+Where their tech or value is real vs. marketing
+Strengths, weaknesses, and buyer friction
+Clear opportunities for differentiation
+Avoid generalities.
+ Use real data, real examples, links, and dates.
+2) Inputs You’ll Use (I’ll provide these when I run it)
+Use ONLY the inputs I give you. Do NOT invent anything.
+Product/outcome: {{what my product delivers}}
+ICP: {{region}}, {{company size}}, {{buyer roles}}
+Key use cases / expectations: {{speed, guarantees, workflows, compliance needs}}
+My pricing: {{paste exactly}}
+These are the source of truth for all comparisons.
+3) What to Include for Each Competitor
+For every relevant competitor:
+Name + URL + 1-sentence positioning
+Who they serve (ICP fit + typical customers)
+What outcome they deliver
+Technology depth (light, medium, heavy)
+light = basic automation
+medium = predictive or workflow-level
+heavy = end-to-end automation or agentic
+Pricing (public, with link)
+If incomplete, label “Not enough public data.”
+Speed, delivery, SLA (if available)
+Strengths
+Weaknesses / friction points
+Links + dates for pricing, docs, or reviews
+Keep every evaluation practical, concise, and founder-friendly.
+4) Mandatory Categories (I’ll customize these per market)
+Search across all logical segments in the market. For example:
+Core platforms
+Point solutions
+Automation tools
+Marketplaces
+Integrators / hybrid service models
+Emerging AI/agentic products
+Enterprise vs SMB solutions
+Don’t limit the search to well-known brands.
+5) Pricing & Cost Comparison
+Show prices only as publicly listed.
+Compute cost per outcome only if there is enough real data.
+ Otherwise label:
+“Outcome cost not computed — insufficient public data.”
+No assumptions without evidence.
+6) Final Output (3 Deliverables)
+A) Competitive Landscape (Founder View)
+A clean table with:
+Vendor
+Outcome delivered
+ICP fit
+Technology depth
+Pricing (as-is)
+Strengths
+Friction
+Verdict: direct, partial, or adjacent competitor
+B) Market Insights
+Short, sharp bullets:
+Pricing patterns
+Speed or delivery benchmarks
+Where value is commoditized
+Where buyers are frustrated
+Underserved segments
+Opportunities for differentiation
+C) How My Product Stacks Up
+Using my provided inputs:
+Where I outperform the market
+Where competitors beat me (with reasons)
+Opportunities to stand out
+Red flags or market risks
+Packaging or pricing ideas
+Make this brutally honest.
+7) Quality Bar
+No fluff
+No invented numbers
+Use real links + dates
+Data must be within 12 months
+Founder-level clarity
