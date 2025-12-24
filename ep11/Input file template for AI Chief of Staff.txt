@@ -1,0 +1,162 @@
+AI CHIEF OF STAFF
+STEP 2: THE THREE OPERATING INPUTS
+
+These three inputs are what turn an AI assistant into a real Chief of Staff.
+They give the system authority to delegate, prioritize, and challenge you.
+
+==================================================
+INPUT 1: TEAM MAP (DELEGATION + DECISION RIGHTS)
+==================================================
+
+Purpose:
+This tells your AI CoS who owns what, who is overloaded, and when to escalate to you.
+Without this, everything comes back to the founder.
+
+--------------------------------------------------
+TEAM MAP
+--------------------------------------------------
+
+Company:
+Stage:
+Operating cadence (weekly sprint / bi-weekly / ad-hoc):
+
+TEAM ROSTER
+For each team member, capture:
+
+- Name:
+- Role:
+- Strengths (top 3):
+- Owns (areas / metrics / outcomes):
+- Current load (low / medium / high):
+- Escalate to founder when:
+
+Repeat for each team member.
+
+--------------------------------------------------
+DECISION RIGHTS
+--------------------------------------------------
+
+Who is the final decision-maker for:
+
+- Product decisions:
+- Hiring decisions:
+- Customer decisions:
+- Budget / spend decisions:
+- Partnerships / external commitments:
+
+--------------------------------------------------
+KNOWN GAPS THIS QUARTER
+--------------------------------------------------
+
+- Skill gaps:
+- Bottlenecks:
+- Single points of failure:
+
+Note:
+Decision Rights + Known Gaps are the most important sections.
+This is how your AI CoS knows when to push work away from you — or back to you.
+
+==================================================
+INPUT 2: SPRINT PLAN (EXECUTION ANCHOR)
+==================================================
+
+Purpose:
+This keeps your AI CoS focused on outcomes, not noise.
+Without a sprint plan, advice becomes reactive.
+
+--------------------------------------------------
+SPRINT PLAN
+--------------------------------------------------
+
+Sprint dates:
+Sprint goal (ONE sentence only):
+
+--------------------------------------------------
+OUTCOMES (MEASURABLE)
+--------------------------------------------------
+
+- Outcome 1:
+- Outcome 2:
+- Outcome 3:
+
+(If an outcome isn’t measurable, it’s not ready.)
+
+--------------------------------------------------
+WORKSTREAMS
+--------------------------------------------------
+
+For each workstream:
+
+- Workstream name:
+- Owner:
+- Definition of done:
+- Dependencies:
+- Risks / constraints:
+
+--------------------------------------------------
+MEETINGS THIS SPRINT
+--------------------------------------------------
+
+For each key meeting:
+
+- Meeting name:
+- Purpose:
+- Decisions needed:
+- Pre-work required:
+
+Note:
+Your AI CoS uses this to:
+- prep meetings
+- challenge scope creep
+- keep work tied to sprint goals
+
+==================================================
+INPUT 3: BACKLOG (FOCUS FILTER)
+==================================================
+
+Purpose:
+This gives your AI CoS permission to say “no” for you.
+It filters noise, marks priorities, and kills distractions.
+
+--------------------------------------------------
+NOW (THIS SPRINT)
+--------------------------------------------------
+
+Format:
+Item | Owner | Impact | Effort | Deadline | Notes
+
+--------------------------------------------------
+NEXT (NEXT SPRINT)
+--------------------------------------------------
+
+Format:
+Item | Owner | Impact | Effort | Notes
+
+--------------------------------------------------
+LATER
+--------------------------------------------------
+
+Format:
+Item | Why it matters | Trigger to start
+
+--------------------------------------------------
+KILL LIST (EXPLICITLY NOT DOING)
+--------------------------------------------------
+
+Format:
+Item | Reason
+
+--------------------------------------------------
+REMINDER
+--------------------------------------------------
+
+- NOW must be small and specific
+- NEXT must be realistic
+- LATER must be guarded
+- KILL LIST must be honest
+
+You do not owe every idea a spot in your backlog.
+
+==================================================
+END OF STEP 2
+==================================================
