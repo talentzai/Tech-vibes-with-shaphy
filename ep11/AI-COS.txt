@@ -1,0 +1,287 @@
+AI CHIEF OF STAFF
+STEP 3: CORE WORKFLOWS
+
+These workflows are where the AI CoS creates leverage.
+They turn context + integrations into execution.
+
+Run these consistently.
+This is how the system compounds.
+
+==================================================
+WORKFLOW 1: DAILY COMMAND BRIEF
+==================================================
+
+When to use:
+- First thing every morning
+
+Purpose:
+- Start the day with clarity
+- Align time, priorities, and decisions
+- Prevent reactive work
+
+Trigger phrase:
+"Daily Brief"
+
+--------------------------------------------------
+PROMPT
+--------------------------------------------------
+
+Run my Daily Command Brief.
+
+Use:
+- Today’s calendar
+- Current sprint plan
+- Active backlog
+- Urgent inbox items (or ask me to paste them)
+
+Return:
+1) Critical path
+   - Top 3 priorities today
+   - Why each matters
+
+2) Time audit
+   - Calendar risks
+   - Context switching
+   - Missing prep blocks
+
+3) Decision queue
+   - Decisions I must make today
+   - Ranked by impact
+
+4) Risk flags
+   - What is likely to slip or break
+
+5) Follow-up radar
+   - Threads or commitments at risk of going cold
+
+6) Delegation list
+   - What should move off my plate
+   - Suggested owner (use Team Map)
+
+Rules:
+- Short sentences
+- No fluff
+- Under 400 words
+
+==================================================
+WORKFLOW 2: MEETING PREP BRIEF
+==================================================
+
+When to use:
+- 10–15 minutes before any important meeting
+
+Purpose:
+- Enter meetings with intent
+- Reduce rambling and misalignment
+- Force decisions
+
+Trigger phrase:
+"Prep my next meeting"
+
+--------------------------------------------------
+PROMPT
+--------------------------------------------------
+
+Create a Meeting Prep Brief.
+
+Use:
+- Meeting title and attendees
+- Relevant calendar context
+- Recent email threads with attendees
+- Related sprint items or backlog work
+
+Return:
+1) Why this meeting matters (1 sentence)
+2) Decisions needed by the end (max 2)
+3) My 5 best questions
+4) Likely derailers or risks
+5) One thing I must not leave without
+
+Rules:
+- Bullet format
+- Direct
+- Decision-focused
+
+==================================================
+WORKFLOW 3: POST-MEETING WRAP
+==================================================
+
+When to use:
+- Immediately after a meeting
+
+Purpose:
+- Turn talk into execution
+- Prevent dropped follow-ups
+- Lock momentum while context is fresh
+
+Trigger phrase:
+"Wrap this meeting"
+
+--------------------------------------------------
+PROMPT
+--------------------------------------------------
+
+Post-Meeting Wrap.
+
+Input:
+- Meeting notes or transcript
+- (If missing, ask me to paste notes)
+
+Return:
+
+A) Executive recap
+   - 3–5 bullets
+
+B) Decisions made
+   Format:
+   Decision | Why | Trade-offs | Next step
+
+C) Action items
+   Format:
+   Task | Owner | Deadline | Priority | Dependency
+
+D) Follow-ups mentioned but not assigned
+
+E) Risks or unclear points (max 3)
+
+Then:
+- Draft the follow-up message in my voice
+- Under 180 words
+- Include owners and deadlines
+- Propose next step and timing when appropriate
+
+==================================================
+WORKFLOW 4: INBOX TRIAGE
+==================================================
+
+When to use:
+- Once or twice per day
+
+Purpose:
+- Turn inbox from stress into execution
+- Surface what actually needs founder attention
+
+Trigger phrase:
+"Triage inbox"
+
+--------------------------------------------------
+PROMPT
+--------------------------------------------------
+
+Inbox Triage.
+
+Review:
+- New and unread messages
+- Threads older than 48–72 hours
+- Conversations involving customers, partners, or investors
+
+Bucket into:
+1) Must reply today
+2) High value this week
+3) Delegate
+4) Archive
+
+For "Must reply today":
+- Draft replies in my voice
+- Under 150 words
+- Include next step, owner, and deadline when relevant
+
+For "Delegate":
+- Suggest best owner using Team Map
+- Draft handoff message
+
+Rules:
+- Be decisive
+- Reduce inbox volume aggressively
+
+==================================================
+WORKFLOW 5: DECISION MEMO
+==================================================
+
+When to use:
+- When stuck
+- When debating options
+- When stakes are high
+
+Purpose:
+- Improve decision quality
+- Reduce regret and rework
+
+Trigger phrase:
+"Decision memo"
+
+--------------------------------------------------
+PROMPT
+--------------------------------------------------
+
+I’m deciding between the following options:
+
+Option A:
+Option B:
+(Optional: Option C)
+
+Context:
+Constraints:
+What I’m optimizing for:
+
+Do the following:
+1) List assumptions I’m making (flag weak ones)
+2) Steelman each option
+3) Identify failure modes (3 / 6 / 12 months)
+4) Reversibility test (easy vs expensive to undo)
+5) Recommend one option
+
+Then return:
+- Decision
+- Why
+- Trade-offs
+- Next 3 actions
+
+Rules:
+- No hedging
+- Be direct
+
+==================================================
+WORKFLOW 6: WEEKLY CHIEF OF STAFF REVIEW
+==================================================
+
+When to use:
+- End of week (Friday or Sunday)
+
+Purpose:
+- Close loops
+- Reset priorities
+- Prevent drift
+
+Trigger phrase:
+"Weekly review"
+
+--------------------------------------------------
+PROMPT
+--------------------------------------------------
+
+Weekly Chief of Staff Review.
+
+Use:
+- Sprint plan
+- Backlog
+- Calendar summary
+- Open follow-ups
+
+Return:
+1) What moved (wins that matter)
+2) What stalled (root cause)
+3) What to cut (3 items)
+4) What to delegate (item → owner)
+5) Decisions I’m avoiding (ranked by impact)
+6) Next week’s top 3 priorities
+   - Include first action for each
+
+Rules:
+- Focus on execution, not reporting
+- Short sentences
+- No fluff
+
+==================================================
+END OF WORKFLOWS
+==================================================
